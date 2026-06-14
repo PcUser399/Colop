@@ -6,7 +6,9 @@ Use these paths when replacing pictures. The page already points to these local 
 
 - `assets/sections/hero-mood.jpg`
 - `assets/sections/hero-background.png` - hero background image placeholder
-- `assets/sections/hero-main-video.mp4` - main right-side hero video, same size as the previous image
+- `assets/sections/hero-main-video.mp4` - main right-side hero video, using the same size and position as the image
+- `assets/sections/universe-background.png` - background image for the Explorez notre univers section
+- `assets/sections/sidebar-bottom.png` - bottom background image inside the Crafty Labeler sidebar
 - `assets/sections/hero-make-pad.jpg`
 - `assets/sections/hero-woodies.jpg`
 - `assets/sections/hero-nio-school.jpg`

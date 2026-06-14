@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>COLOP Arts & Crafts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -57,7 +61,7 @@
           </div>
           <div class="hero-art" aria-label="Produits COLOP Arts and Crafts">
             <video class="hero-main-image" autoplay muted loop playsinline aria-label="Video principale des produits">
-              <source src="assets/sections/hero-main-video.mp4" type="video/mp4" />
+              <source src="assets/sections/hero-main-video.webm" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -65,26 +69,31 @@
 
       <div class="wrap layout">
         <aside class="filters" aria-label="Categories de boutique">
+          <button class="filter-toggle" type="button" aria-label="Masquer les filtres" aria-expanded="true"></button>
+          <div class="filter-brand">
+            <strong>Crafty Labeler</strong>
+            <span>Arts & Crafts</span>
+          </div>
           <h2>Filtrer par</h2>
-          <h3>Options d'achat</h3>
+          <h3><i class="fa-solid fa-sliders" aria-hidden="true"></i>Options d'achat</h3>
           <h4>Categorie</h4>
           <ul>
-            <li><a href="#">MARKY</a><span>14</span></li>
-            <li><a href="#">Craft Labeler</a><span>8</span></li>
-            <li><a href="#">Encreurs MAKE</a><span>15</span></li>
-            <li><a href="#">Nettoyant pour tampons</a><span>1</span></li>
-            <li><a href="#">Tatouages temporaires LaDot</a><span>85</span></li>
-            <li><a href="#">Woodies</a><span>50</span></li>
-            <li><a href="#">Princess Maja</a><span>42</span></li>
-            <li><a href="#">NIO School</a><span>45</span></li>
-            <li><a href="#">CLEANY</a><span>12</span></li>
+            <li><i class="option-icon fa-solid fa-crown" aria-hidden="true"></i><a href="#">MARKY</a><span>14</span></li>
+            <li><i class="option-icon fa-solid fa-tag" aria-hidden="true"></i><a href="#">Craft Labeler</a><span>8</span></li>
+            <li><i class="option-icon fa-solid fa-stamp" aria-hidden="true"></i><a href="#">Encreurs MAKE</a><span>15</span></li>
+            <li><i class="option-icon fa-solid fa-droplet" aria-hidden="true"></i><a href="#">Nettoyant pour tampons</a><span>1</span></li>
+            <li><i class="option-icon fa-solid fa-sun" aria-hidden="true"></i><a href="#">Tatouages temporaires LaDot</a><span>85</span></li>
+            <li><i class="option-icon fa-solid fa-leaf" aria-hidden="true"></i><a href="#">Woodies</a><span>50</span></li>
+            <li><i class="option-icon fa-regular fa-gem" aria-hidden="true"></i><a href="#">Princess Maja</a><span>42</span></li>
+            <li><i class="option-icon fa-solid fa-graduation-cap" aria-hidden="true"></i><a href="#">NIO School</a><span>45</span></li>
+            <li><i class="option-icon fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i><a href="#">CLEANY</a><span>12</span></li>
           </ul>
-          <a class="view-all" href="#">Voir tous les produits</a>
+          <a class="view-all" href="#"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Voir tous les produits</a>
         </aside>
 
         <div class="content">
           <section class="section-intro">
-            <h2>Explorez notre univers <span>Arts & Crafts</span></h2>
+            <h2>Decouvrez notre univers <span>Arts & Crafts</span></h2>
             <p>
               Nous proposons une large gamme de tampons et d'encreurs pour de nombreuses occasions et utilisations :
               des tampons en bois soigneusement fabriques, des tampons ingenieux pour le lavage des mains, des tampons
@@ -142,53 +151,63 @@
               <em>Explorer</em>
             </a>
           </section>
+        </div>
+      </div>
 
+      <div class="wrap after-universe">
           <section class="partnership">
-            <img src="assets/sections/company.jpg" alt="Produits creatifs COLOP Arts and Crafts" />
             <div>
+              <span>Notre engagement</span>
               <h2>Un partenariat solide pour des tampons creatifs</h2>
               <p>
                 COLOP Arts & Crafts est l'alliance d'une equipe creative forte de plus de 20 ans d'experience dans le
                 developpement et la production de tampons creatifs, avec le fabricant autrichien COLOP. Nous misons sur
                 une fabrication 100% europeenne, une qualite premium et une image de marque moderne et professionnelle.
               </p>
+              <a class="button" href="#"><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>Telecharger le catalogue</a>
             </div>
-            <a class="button" href="#">Catalogue</a>
+            <img src="assets/sections/company.jpg" alt="Produits creatifs COLOP Arts and Crafts" />
           </section>
 
           <section class="news">
             <div class="section-heading">
               <h2>Actualites</h2>
+              <a href="#">Voir toutes les actualites</a>
             </div>
             <div class="news-grid">
-              <article>
+              <article class="featured-news">
                 <img src="assets/news/creativeworld-2025.jpg" alt="" />
                 <span>2025</span>
                 <h3>COLOP a Creativeworld 2025</h3>
+                <p>Retour sur notre presence au salon Creativeworld 2025 et les moments forts de cette edition.</p>
                 <a href="#">Lire plus</a>
               </article>
               <article>
                 <img src="assets/news/stamp-cleaner.jpg" alt="" />
                 <span>Nouveau</span>
                 <h3>Nouveau nettoyant pour tampons COLOP</h3>
+                <p>Un nettoyage efficace et doux pour prolonger la duree de vie de vos tampons.</p>
                 <a href="#">Lire plus</a>
               </article>
               <article>
                 <img src="assets/news/make-2-stamp-pad.jpg" alt="" />
                 <span>MAKE</span>
                 <h3>Nouvel encreur MAKE 2</h3>
+                <p>Encore plus de couleurs intenses pour toutes vos creations.</p>
                 <a href="#">Lire plus</a>
               </article>
               <article>
                 <img src="assets/news/new-ladot-sets.jpg" alt="" />
                 <span>LaDot</span>
                 <h3>Nouveaux sets LaDot</h3>
+                <p>Des motifs uniques et funs pour petits et grands.</p>
                 <a href="#">Lire plus</a>
               </article>
               <article>
                 <img src="assets/news/back-to-school-2024.png" alt="" />
                 <span>Ecole</span>
                 <h3>Rentree scolaire 2024</h3>
+                <p>Preparez la rentree avec nos tampons pratiques et personnalisables.</p>
                 <a href="#">Lire plus</a>
               </article>
             </div>
@@ -200,37 +219,46 @@
             </div>
             <div class="product-grid">
               <article class="product-card">
+                <button class="wishlist-button" type="button" aria-label="Ajouter aux favoris"><i class="fa-regular fa-heart"></i></button>
                 <div class="product-image"><img src="assets/products/marky-pencil-case-pink.jpg" alt="Trousse Marky rose" /></div>
                 <h3>Trousse Marky - rose</h3>
+                <div class="rating" aria-label="Note 5 sur 5"><span>★★★★★</span><small>(124)</small></div>
                 <p class="price">&euro;11.95</p>
                 <p class="meta">TVA incluse &middot; delai de livraison 2 a 7 jours ouvrables</p>
-                <button>Ajouter au panier</button>
+                <button><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ajouter au panier</button>
               </article>
               <article class="product-card">
+                <button class="wishlist-button" type="button" aria-label="Ajouter aux favoris"><i class="fa-regular fa-heart"></i></button>
                 <div class="product-image"><img src="assets/products/ladot-set-bear-dolphin.jpg" alt="Set LaDot S Ours et Dauphin" /></div>
                 <span class="flag">flag-ladot-label</span>
                 <h3>Set LaDot S - Ours & Dauphin</h3>
+                <div class="rating" aria-label="Note 5 sur 5"><span>★★★★★</span><small>(98)</small></div>
                 <p class="price">&euro;19.95</p>
                 <p class="meta">TVA incluse &middot; delai de livraison 2 a 7 jours ouvrables</p>
-                <button>Ajouter au panier</button>
+                <button><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ajouter au panier</button>
               </article>
               <article class="product-card">
+                <button class="wishlist-button" type="button" aria-label="Ajouter aux favoris"><i class="fa-regular fa-heart"></i></button>
                 <div class="product-image"><img src="assets/products/marky-textile-stamp-green.jpg" alt="Tampon textile Marky vert" /></div>
                 <span class="flag">flag-mine-label</span>
                 <h3>Tampon textile Marky - vert</h3>
+                <div class="rating" aria-label="Note 5 sur 5"><span>★★★★★</span><small>(76)</small></div>
                 <p class="price">&euro;17.95</p>
                 <p class="meta">TVA incluse &middot; delai de livraison 2 a 7 jours ouvrables</p>
-                <button>Ajouter au panier</button>
+                <button><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ajouter au panier</button>
               </article>
               <article class="product-card">
+                <button class="wishlist-button" type="button" aria-label="Ajouter aux favoris"><i class="fa-regular fa-heart"></i></button>
                 <div class="product-image"><img src="assets/products/make-1-ink-pad-uv.jpg" alt="Encreur MAKE 1 encre UV" /></div>
                 <span class="flag">nouveau</span>
                 <h3>Encreur MAKE 1 - encre UV</h3>
+                <div class="rating" aria-label="Note 5 sur 5"><span>★★★★★</span><small>(54)</small></div>
                 <p class="price">&euro;6.19</p>
                 <p class="meta">TVA incluse &middot; delai de livraison 2 a 7 jours ouvrables</p>
-                <button>Ajouter au panier</button>
+                <button><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>Ajouter au panier</button>
               </article>
             </div>
+            <a class="products-more" href="#">Voir tous les produits</a>
           </section>
 
           <section class="manufacturing">
@@ -251,22 +279,8 @@
               </p>
             </div>
           </section>
-        </div>
       </div>
     </main>
-
-    <section class="newsletter">
-      <div class="wrap newsletter__inner">
-        <div>
-          <h2>Newsletter</h2>
-          <p>Inscrivez-vous a notre newsletter :</p>
-        </div>
-        <form>
-          <input type="email" placeholder="Adresse e-mail" aria-label="Adresse e-mail" />
-          <button type="submit">S'abonner</button>
-        </form>
-      </div>
-    </section>
 
     <footer class="footer">
       <div class="wrap footer-grid">
@@ -297,8 +311,16 @@
           <a href="#">Contactez-nous</a>
         </div>
       </div>
-      <div class="wrap copyright">
-        &copy; 2026 by COLOP Stempelerzeugung Skopek Gesellschaft m.b.H. & Co. KG.
+      <div class="wrap footer-bottom-row">
+        <div class="copyright">
+          &copy; 2026 by COLOP Stempelerzeugung Skopek Gesellschaft m.b.H. & Co. KG.
+        </div>
+        <div class="social-row">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
       </div>
     </footer>
 

@@ -461,7 +461,7 @@ input {
   height: calc(100vh - var(--header-offset, 82px));
   max-height: calc(100vh - var(--header-offset, 82px));
   min-height: calc(100vh - var(--header-offset, 82px));
-  padding: 24px 28px 32px;
+  padding: 0;
   background: linear-gradient(180deg, #09131f 0%, #06111d 100%);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-left: 0;
@@ -469,11 +469,36 @@ input {
   box-shadow: 0 24px 50px rgba(6, 17, 29, 0.18);
 }
 
+.filters-panel {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 24px 28px 150px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.filters-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.filters-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.filters-panel::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
 .filters::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
+  z-index: 0;
   width: 150px;
   height: 150px;
   background: url("assets/sections/sidebar-bottom.png") left bottom / contain no-repeat;
@@ -571,6 +596,8 @@ body.filters-hidden .after-universe {
   left: 0;
   right: auto;
   top: 24px;
+  float: none;
+  margin: 0;
   border-radius: 0 999px 999px 0;
 }
 
@@ -755,6 +782,52 @@ body.filters-hidden .after-universe {
 
 .view-all i {
   font-size: 15px;
+}
+
+@media (max-height: 780px) and (min-width: 1041px) {
+  .filters-panel {
+    padding-top: 18px;
+    padding-bottom: 124px;
+  }
+
+  .filter-brand {
+    min-height: 82px;
+    margin-bottom: 14px;
+  }
+
+  .filter-brand strong {
+    font-size: 27px;
+  }
+
+  .filter-brand span {
+    margin-top: 6px;
+    font-size: 10px;
+  }
+
+  .filters h2 {
+    padding-bottom: 9px;
+  }
+
+  .filters h3 {
+    min-height: 42px;
+    margin-bottom: 18px;
+  }
+
+  .filters li {
+    min-height: 38px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+
+  .view-all {
+    min-height: 46px;
+    margin-top: 18px;
+  }
+
+  .filters::after {
+    width: 118px;
+    height: 118px;
+  }
 }
 
 .content {

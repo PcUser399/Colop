@@ -59,3 +59,50 @@ if (filters && layout) {
   window.addEventListener("scroll", updateFilters, { passive: true });
   window.addEventListener("resize", updateFilters);
 }
+
+// ==========================================================================
+// MARKY PAGE COLOR SWATCHES INTERACTIVITY
+// ==========================================================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Main stamp color picker
+  const stampSwatches = document.querySelectorAll(".color-swatches .swatch");
+  const mainStampImg = document.getElementById("main-stamp-image");
+
+  if (stampSwatches && mainStampImg) {
+    stampSwatches.forEach(swatch => {
+      swatch.addEventListener("click", () => {
+        stampSwatches.forEach(s => s.classList.remove("active"));
+        swatch.classList.add("active");
+        
+        const newImgSrc = swatch.getAttribute("data-img");
+        if (newImgSrc) {
+          mainStampImg.src = newImgSrc;
+        }
+      });
+    });
+  }
+
+  // Accessories color pickers (backpack, pencilcase)
+  const cardSwatches = document.querySelectorAll(".card-color-picker .swatch");
+  cardSwatches.forEach(swatch => {
+    swatch.addEventListener("click", () => {
+      const container = swatch.parentElement;
+      const product = swatch.getAttribute("data-product");
+      const newImgSrc = swatch.getAttribute("data-img");
+      
+      // Remove active class from sibling swatches
+      container.querySelectorAll(".swatch").forEach(s => s.classList.remove("active"));
+      swatch.classList.add("active");
+      
+      // Update image
+      if (product === "backpack") {
+        const img = document.getElementById("backpack-image");
+        if (img) img.src = newImgSrc;
+      } else if (product === "pencilcase") {
+        const img = document.getElementById("pencilcase-image");
+        if (img) img.src = newImgSrc;
+      }
+    });
+  });
+});
+

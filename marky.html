@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COLOP MARKY | Tampons & Marquage Personnalisé - Nüma</title>
+  <meta name="description" content="Découvrez la gamme COLOP MARKY pour enfants chez Nüma. Tampons textiles personnalisables, kits de recharge, étiquettes stylos et gourdes pour marquer toutes leurs affaires.">
+  <meta name="keywords" content="COLOP Marky, tampon textile, marquage vêtements, étiquettes autocollantes, étiquette gourde, fournitures scolaires personnalisées">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <header id="main-header">
+    <div class="container navbar-container">
+      <!-- Logo -->
+      <a href="index.html" class="logo" id="nav-logo" aria-label="Accueil Nüma Coffee Kitchen">
+        <div class="logo-icon">
+          <!-- Steaming Coffee Mug SVG -->
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+            <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+            <line x1="6" y1="2" x2="6" y2="4"></line>
+            <line x1="10" y1="2" x2="10" y2="4"></line>
+            <line x1="14" y1="2" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          N&Uuml;MA
+          <span>Coffee Kitchen</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav aria-label="Navigation Principale">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html#home" id="link-home">Accueil</a></li>
+          <li><a href="index.html#quiz-section" id="link-quiz">Trouver Mon Café</a></li>
+          <li><a href="index.html#menu-section" id="link-menu">Menu</a></li>
+          <li class="nav-dropdown">
+            <a href="#" class="active" id="link-arts">Arts &amp; Crafts <span class="arrow">&#9662;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="link-marky" class="active">Marky</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#space-section" id="link-space">Notre Espace</a></li>
+          <li><a href="index.html#contact-section" id="link-contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Cart Trigger -->
+        <button class="cart-trigger" id="cart-btn" aria-label="Ouvrir le Panier">
+          <!-- Shopping Bag SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count" id="cart-badge">0</span>
+        </button>
+
+        <a href="index.html#menu-section" class="btn btn-primary btn-sm btn-nav-order" id="nav-order-btn">Commander</a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Basculer le Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="marky-hero" id="marky-home">
+    <div class="container marky-hero-grid">
+      <div class="hero-content reveal active">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Collection Parent & Enfant
+        </div>
+        <h1>COLOP MARKY <br><span class="highlight">Tampon & Étiquettes</span></h1>
+        <p>Découvrez MARKY, le tampon textile de COLOP ! La méthode la plus rapide et efficace pour identifier les vêtements, gourdes et fournitures de vos enfants. Fabriqué en Autriche, avec encre dermatologiquement testée.</p>
+        <div class="hero-buttons">
+          <a href="#products-section" class="btn btn-primary" id="marky-explore-cta">Découvrir la Gamme</a>
+          <a href="#how-section" class="btn btn-secondary" id="marky-how-cta">Comment ça marche ?</a>
+        </div>
+      </div>
+      <div class="marky-hero-media reveal reveal-delay-2 active">
+        <div class="marky-hero-img-wrapper">
+          <img src="assets/images/marky-hero.png" alt="COLOP Marky Textile Stamp dans une chambre d'enfant" class="marky-hero-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO FEATURES SECTION -->
+  <section class="marky-intro section-padding" id="features-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="subtitle">Conception Intelligente</span>
+        <h2>Pourquoi choisir MARKY ?</h2>
+        <p>Un concept ludique, pratique et durable pour faciliter le quotidien des parents.</p>
+      </div>
+
+      <div class="marky-intro-grid">
+        <!-- Card 1 -->
+        <div class="marky-intro-card reveal reveal-delay-1">
+          <div class="marky-intro-card-icon">🔬</div>
+          <h3>Dermatologiquement Testé</h3>
+          <p>L'encre textile intégrée est hypoallergénique et douce pour la peau sensible des enfants (certifiée 'Excellent' par Dermatest).</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="marky-intro-card reveal reveal-delay-2">
+          <div class="marky-intro-card-icon">💧</div>
+          <h3>Haute Résistance</h3>
+          <p>Les marquages sur vêtements résistent au lave-linge jusqu'à 60°C. Les étiquettes collées résistent parfaitement au lave-vaisselle.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="marky-intro-card reveal reveal-delay-3">
+          <div class="marky-intro-card-icon">✏️</div>
+          <h3>100% Personnalisable</h3>
+          <p>Créez et modifiez le texte à volonté grâce au jeu de caractères inclus (lettres, chiffres et pictogrammes amusants).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION -->
+  <section class="marky-how section-padding" id="how-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="subtitle">Guide Pratique</span>
+        <h2>Comment utiliser MARKY ?</h2>
+        <p>Marquez toutes les affaires en quelques étapes simples.</p>
+      </div>
+
+      <div class="marky-how-grid">
+        <!-- Step 1 -->
+        <div class="marky-how-card reveal reveal-delay-1">
+          <span class="marky-how-step-num">01</span>
+          <h3>Composer</h3>
+          <p>Retirez le couvercle et utilisez la pince pour placer les caractères sur la base du tampon.</p>
+        </div>
+        <!-- Step 2 -->
+        <div class="marky-how-card reveal reveal-delay-2">
+          <span class="marky-how-step-num">02</span>
+          <h3>Tamponner</h3>
+          <p>Pressez le tampon directement sur les vêtements clairs, le papier, le carton ou les chaussures.</p>
+        </div>
+        <!-- Step 3 -->
+        <div class="marky-how-card reveal reveal-delay-3">
+          <span class="marky-how-step-num">03</span>
+          <h3>Thermocoller</h3>
+          <p>Pour les tissus foncés, tamponnez la bande thermocollante fournie, puis fixez-la au fer à repasser.</p>
+        </div>
+        <!-- Step 4 -->
+        <div class="marky-how-card reveal reveal-delay-4">
+          <span class="marky-how-step-num">04</span>
+          <h3>Étiqueter</h3>
+          <p>Pour les objets lisses (gourdes, crayons), tamponnez les étiquettes adhésives et collez-les.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="marky-products-section section-padding" id="products-section">
+    <div class="container">
+      <div class="section-header text-center reveal">
+        <span class="subtitle">Boutique en Ligne</span>
+        <h2>La Gamme Complète MARKY</h2>
+        <p>Sélectionnez vos tampons et accessoires et ajoutez-les directement à votre panier.</p>
+      </div>
+
+      <div class="menu-grid" id="marky-products-grid">
+        <!-- Tampon Vert -->
+        <article class="menu-item reveal reveal-delay-1 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Tampon</span>
+            <img src="assets/images/marky-stamp.png" alt="Tampon Textile MARKY - Vert" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>MARKY - Vert</h3>
+              <span class="menu-item-price">55.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Le tampon textile personnalisable MARKY en coloris vert. Livré avec un set de caractères, bande thermocollante et pince.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Vert</span>
+                <span class="menu-item-tag">Textile</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-stamp-green" aria-label="Ajouter Tampon Vert au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tampon Rose -->
+        <article class="menu-item reveal reveal-delay-2 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Tampon</span>
+            <img src="assets/images/marky-stamp.png" alt="Tampon Textile MARKY - Rose" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>MARKY - Rose</h3>
+              <span class="menu-item-price">55.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Le tampon textile personnalisable MARKY en coloris rose. Livré avec un set de caractères, bande thermocollante et pince.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Rose</span>
+                <span class="menu-item-tag">Textile</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-stamp-pink" aria-label="Ajouter Tampon Rose au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Tampon Bleu -->
+        <article class="menu-item reveal reveal-delay-3 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Tampon</span>
+            <img src="assets/images/marky-stamp.png" alt="Tampon Textile MARKY - Bleu" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>MARKY - Bleu</h3>
+              <span class="menu-item-price">55.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Le tampon textile personnalisable MARKY en coloris bleu. Livré avec un set de caractères, bande thermocollante et pince.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Bleu</span>
+                <span class="menu-item-tag">Textile</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-stamp-blue" aria-label="Ajouter Tampon Bleu au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kit Recharge -->
+        <article class="menu-item reveal reveal-delay-1 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Recharge</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>Kit Recharge MARKY</text></svg>" alt="Kit de Recharge MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Kit de Recharge</h3>
+              <span class="menu-item-price">30.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Recharge complète contenant 1 cassette d'encre noire, 1m de bande thermocollante et 40 étiquettes adhésives.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Encre</span>
+                <span class="menu-item-tag">Bande</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-refill-kit" aria-label="Ajouter Recharge au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Etiquettes Stylos -->
+        <article class="menu-item reveal reveal-delay-2 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Étiquettes</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>&Eacute;tiquettes Stylos</text></svg>" alt="Étiquettes Stylos MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Étiquettes Stylos</h3>
+              <span class="menu-item-price">18.00 TND</span>
+            </div>
+            <p class="menu-item-desc">96 étiquettes autocollantes coloris pastel pour stylos et règles. Papier recyclé, séchage ultra rapide.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Stylos</span>
+                <span class="menu-item-tag">Pastel</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-pen-labels" aria-label="Ajouter Étiquettes Stylos au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Etiquettes Lave-Vaisselle -->
+        <article class="menu-item reveal reveal-delay-3 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Étiquettes</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>&Eacute;tiquettes Lave-Vaisselle</text></svg>" alt="Étiquettes Lave-Vaisselle MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Étiquettes Lave-Vaisselle</h3>
+              <span class="menu-item-price">18.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Étiquettes adhésives résistantes à l'eau pour gourdes, boîtes à lunch, etc. Passage au lave-vaisselle sans problème.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Gourdes</span>
+                <span class="menu-item-tag">Imperméable</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-dishwasher-labels" aria-label="Ajouter Étiquettes Gourdes au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sac a dos -->
+        <article class="menu-item reveal reveal-delay-1 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Accessoire</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>Sac &agrave; Dos MARKY</text></svg>" alt="Sac à Dos Enfant MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Sac à Dos Enfant</h3>
+              <span class="menu-item-price">120.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Sac à dos ergonomique avec rembourrage dorsal respirant et bandes réfléchissantes. Badge velcro personnalisable.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Scolaire</span>
+                <span class="menu-item-tag">Premium</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-backpack" aria-label="Ajouter Sac à dos au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Trousse Silicone -->
+        <article class="menu-item reveal reveal-delay-2 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Accessoire</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>Trousse Silicone</text></svg>" alt="Trousse Silicone MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Trousse Silicone</h3>
+              <span class="menu-item-price">36.00 TND</span>
+            </div>
+            <p class="menu-item-desc">Trousse en silicone durable et imperméable. Base extensible pour plus de rangement et étiquette de marquage.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Trousse</span>
+                <span class="menu-item-tag">Silicone</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-pencil-case" aria-label="Ajouter Trousse au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Bracelets SOS -->
+        <article class="menu-item reveal reveal-delay-3 active">
+          <div class="menu-item-media">
+            <span class="menu-item-badge">Sécurité</span>
+            <img src="data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22 viewBox=%220 0 300 200%22><rect width=%22100%25%22 height=%22100%25%22 fill=%22%23C7B7A3%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23561C24%22>Bracelets SOS</text></svg>" alt="Bracelets de Sécurité SOS MARKY" class="menu-item-img" style="opacity: 1; width: 100%; height: auto;">
+          </div>
+          <div class="menu-item-content">
+            <div class="menu-item-title-row">
+              <h3>Bracelets SOS</h3>
+              <span class="menu-item-price">18.00 TND</span>
+            </div>
+            <p class="menu-item-desc">20 bracelets SOS colorés pour enfants. Résistent aux UV et à l'eau de mer. Livrés avec un marqueur permanent.</p>
+            <div class="menu-item-footer">
+              <div class="menu-item-tags">
+                <span class="menu-item-tag">Sécurité</span>
+                <span class="menu-item-tag">UV-proof</span>
+              </div>
+              <button class="btn-add-to-cart" data-add-to-cart="marky-sos-wristbands" aria-label="Ajouter Bracelets SOS au panier">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOPPING CART SLIDE DRAWER -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Panier d'Achat">
+    
+    <!-- Success checkout modal screen -->
+    <div class="success-modal" id="checkout-success-modal">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+          <polyline points="9 11 11 13 15 9"></polyline>
+        </svg>
+      </div>
+      <h4>Commande Envoyée à la Cuisine !</h4>
+      <p>Merci d'avoir commandé chez Nüma. Votre barista prépare actuellement vos boissons et plats. Récupérez-les au bar dans 10 à 15 minutes.</p>
+      <button class="btn btn-primary" id="checkout-close-success">Terminé</button>
+    </div>
+
+    <div class="cart-header">
+      <h3>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+        Votre Commande
+      </h3>
+      <button class="cart-close-btn" id="cart-close" aria-label="Fermer le Panier">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Scrollable Items Container -->
+    <div class="cart-items" id="cart-items-container">
+      <!-- Empty Cart View -->
+      <div class="cart-empty-view" id="cart-empty-state">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 8h1a4 4 0 1 1 0 8h-1"></path>
+          <path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4Z"></path>
+          <line x1="6" y1="2" x2="6" y2="4"></line>
+          <line x1="10" y1="2" x2="10" y2="4"></line>
+          <line x1="14" y1="2" x2="14" y2="4"></line>
+        </svg>
+        <p>Votre panier est actuellement vide.</p>
+        <a href="index.html#menu-section" class="btn btn-secondary btn-sm" id="cart-empty-shop-cta">Parcourir le Menu</a>
+      </div>
+    </div>
+
+    <!-- Cart Footer Details -->
+    <div class="cart-footer" id="cart-footer">
+      <div class="cart-totals-row">
+        <span>Sous-total</span>
+        <span id="cart-subtotal">0.00 TND</span>
+      </div>
+      <div class="cart-totals-row">
+        <span>Taxe Est. (8%)</span>
+        <span id="cart-tax">0.00 TND</span>
+      </div>
+      <div class="cart-totals-row total">
+        <span>Total à Payer</span>
+        <span id="cart-total">0.00 TND</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" id="checkout-btn">Finaliser la Commande</button>
+    </div>
+  </aside>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>N&Uuml;MA</h3>
+        <p>Un café-cuisine artisanal dédié aux grains biologiques d'origine unique, aux plats lents au levain et aux espaces de travail esthétiques et paisibles.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explorer</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#quiz-section">Trouver Mon Café</a></li>
+          <li><a href="index.html#menu-section">Menu de la Cuisine</a></li>
+          <li><a href="index.html#space-section">Le Sanctuaire</a></li>
+          <li><a href="#" class="active">Marky (Arts &amp; Crafts)</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="#">Politique de Confidentialité</a></li>
+          <li><a href="#">Conditions de Service</a></li>
+          <li><a href="#">Retrait & Retours</a></li>
+          <li><a href="#">Contacter le Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Nouvelles du Foyer</h4>
+        <p>Abonnez-vous pour recevoir des mises à jour de torréfaction, des secrets de menu saisonnier et des invitations exclusives.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="vous@exemple.com" aria-label="Adresse e-mail pour la newsletter" required>
+          <button type="submit" class="newsletter-btn" aria-label="S'abonner">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Nüma Coffee Kitchen. Conçu pour l'excellence visuelle et la saveur premium. Tous droits réservés.</p>
+      <ul class="footer-bottom-links">
+        <li><a href="#">Accessibilité</a></li>
+        <li><a href="#">Traiteur</a></li>
+        <li><a href="#">Carrières</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

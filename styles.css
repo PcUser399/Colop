@@ -2049,8 +2049,10 @@ body.filters-hidden .after-universe {
 }
 
 .marky-hero-art {
-  height: 100%;
+  width: 100%;
+  height: min(100%, 680px);
   min-height: 0;
+  align-self: center;
 }
 
 .marky-hero-img {
@@ -2062,8 +2064,9 @@ body.filters-hidden .after-universe {
   display: block;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   min-height: 0;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
 }
 
@@ -2150,6 +2153,52 @@ body.filters-hidden .after-universe {
 
 .hero-badges .badge i {
   color: var(--red);
+}
+
+@media (max-height: 820px) and (min-width: 993px) {
+  .marky-hero {
+    padding-top: 88px;
+    padding-bottom: 26px;
+  }
+
+  .marky-hero__inner {
+    height: calc(100vh - 114px);
+    gap: 46px;
+  }
+
+  .marky-hero-copy h1 {
+    font-size: clamp(62px, 6.4vw, 98px);
+  }
+
+  .marky-hero-title {
+    font-size: clamp(34px, 3.25vw, 52px);
+  }
+
+  .marky-subtitle {
+    margin-top: 24px;
+    padding-top: 22px;
+    font-size: 17px;
+  }
+
+  .marky-feature-row {
+    gap: 22px;
+    margin: 24px 0 30px;
+  }
+
+  .marky-feature-row span {
+    grid-template-columns: 52px auto;
+    font-size: 14px;
+  }
+
+  .marky-feature-row i {
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+  }
+
+  .marky-primary {
+    min-height: 48px;
+  }
 }
 
 /* Intro Section */
@@ -2524,7 +2573,14 @@ body.filters-hidden .after-universe {
 
 /* Responsive Styles for Marky */
 @media (max-width: 992px) {
+  .marky-hero {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
   .marky-hero__inner {
+    height: auto;
     grid-template-columns: 1fr;
     gap: 40px;
   }
@@ -2535,7 +2591,7 @@ body.filters-hidden .after-universe {
 
   .marky-hero-art,
   .marky-hero-card {
-    height: 420px;
+    height: clamp(320px, 48vw, 520px);
     min-height: 0;
   }
 
@@ -2601,7 +2657,7 @@ body.filters-hidden .after-universe {
 
   .marky-hero-art,
   .marky-hero-card {
-    height: 320px;
+    height: clamp(260px, 76vw, 380px);
     min-height: 0;
   }
 

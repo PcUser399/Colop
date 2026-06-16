@@ -194,6 +194,27 @@ if (filters && layout) {
     heroImage.alt = `MARKY ${selectedMarkyColor} etape ${markyHeroState}`;
   };
 
+  const waitForHeroImage = () => new Promise((resolve) => {
+    if (heroImage.complete && heroImage.naturalWidth > 0) {
+      resolve();
+      return;
+    }
+
+    const finish = () => {
+      heroImage.removeEventListener("load", finish);
+      heroImage.removeEventListener("error", finish);
+      resolve();
+    };
+
+    heroImage.addEventListener("load", finish, { once: true });
+    heroImage.addEventListener("error", finish, { once: true });
+  });
+
+  const updateHeroImageAndWait = async () => {
+    updateHeroImage();
+    await waitForHeroImage();
+  };
+
   const getTransitionVideo = (fromState = markyHeroState) => {
     return transitionVideos[selectedMarkyColor]?.[fromState] || transitionVideos.green[fromState];
   };
@@ -359,7 +380,7 @@ if (filters && layout) {
 
     await transitionVideo;
 
-    updateHeroImage();
+    await updateHeroImageAndWait();
     heroImage.classList.add("is-active");
     heroVideo.pause();
     heroVideo.classList.remove("is-active");
@@ -385,7 +406,7 @@ if (filters && layout) {
     await wait(360);
     stepText.innerHTML = initialStepText;
     stepText.dataset.step = "0";
-    updateHeroImage();
+    await updateHeroImageAndWait();
     stepText.classList.remove("is-leaving");
     stepText.classList.add("is-entering");
     heroImage.classList.add("is-active");
